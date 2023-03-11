@@ -12,7 +12,7 @@ function NotesSearch() {
     return (
         <input
             className="NotesSearch"
-            placeholder="Escribe una nota"
+            placeholder="Busca una nota"
             value={searchValue}
             onChange={onSearchValueChange}
         />
