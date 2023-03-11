@@ -6,7 +6,9 @@ import { NotesItem } from '../NotesItem/NotesItem';
 import { NoteForm } from '../NoteForm/NoteForm';
 import { CreateNotesButton } from '../CreateNotesButton/CreateNotesButton'
 import { Modal } from '../Modal/Modal';
+import { Loader } from '../Loader/Loader';
 import { useContext } from 'react';
+import "./AppUI.css"
 
 function AppUI() {
     const { error,
@@ -20,14 +22,15 @@ function AppUI() {
 
 
     return (
-        <>
-            <NotesCounter />
-            <NotesSearch />
-
+        <>  {loading && <Loader />}
             <NotesList>
                 {error && <p>Hubo un error</p>}
-                {loading && <p>Estamos cargando el contenido...</p>}
-                {(!loading && !searchedNotes.length) && <p>Crea tu primera Nota!</p>}
+                {(!loading && !searchedNotes.length) &&
+                    <>
+                        <NotesCounter />
+                        <NotesSearch />
+                        <p className='primeraNota'>Crea tu primera Nota!</p>
+                    </>}
                 {searchedNotes.map(note => (
                     <NotesItem
                         key={note.text}
@@ -38,11 +41,11 @@ function AppUI() {
             </NotesList>
             {!!openModal && (
                 <Modal>
-                   <NoteForm /> 
+                    <NoteForm />
                 </Modal>
             )}
 
-            <CreateNotesButton 
+            <CreateNotesButton
                 setOpenModal={setOpenModal}
             />
         </>

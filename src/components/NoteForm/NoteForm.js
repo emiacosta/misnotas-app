@@ -35,15 +35,15 @@ function NoteForm() {
                 onChange={onChange}></textarea>
             <div className="NoteForm-buttonContainer">
                 <button
+                    type="submit"
+                    className="NoteForm-button NoteForm-button--add">
+                    Añadir nota
+                </button>
+                <button
                     type="button"
                     className="NoteForm-button NoteForm-button--cancel"
                     onClick={onCancel}>
                     Cancelar
-                </button>
-                <button
-                    type="submit"
-                    className="NoteForm-button NoteForm-button--add">
-                    Añadir nota
                 </button>
             </div>
         </form>

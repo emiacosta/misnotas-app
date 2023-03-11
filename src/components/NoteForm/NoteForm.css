@@ -1,71 +1,112 @@
 form {
-    width: 90%;
-    max-width: 300px;
-    background-color: #fff;
-    padding: 33px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  label {
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    color: #1E1E1F;
-    margin-bottom: 26px;
-  }
-  
-  textarea {
-    background-color: #F9FBFC;
-    border: 2px solid #202329;
-    border-radius: 2px;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
-    color: #1E1E1F;
-    font-size: 20px;
-    text-align: center;
-    padding: 12px;
-    height: 96px;
-    width: calc(100% - 25px);
-  }
-  
-  textarea::placeholder {
-    color: #A5A5A5;
-    font-family: 'Montserrat';
-    font-weight: 400;
-  }
-  
-  textarea:focus {
-    outline-color: #61DAFA;
-  }
-  
-  .NoteForm-buttonContainer {
-    margin-top: 14px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .NoteForm-button {
-    cursor: pointer;
-    display: inline-block;
-    font-size: 20px;
-    color: #202329;
-    font-weight: 400;
-    width: 120px;
-    height: 48px;
-    border-radius: 2px;
-    border: none;
-    font-family: 'Montserrat';
-  }
-  
-  .NoteForm-button--add {
-    background: #61DAFA;
-    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
-  }
-  
-  .NoteForm-button--cancel {
-    background: transparent;
-  }
+  width: 90%;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 33px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #1E1E1F;
+  margin-bottom: 26px;
+}
+
+textarea {
+  background-color: #F9FBFC;
+  border: 2px solid #202329;
+  border-radius: 2px;
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+  color: #1E1E1F;
+  font-size: 20px;
+  text-align: center;
+  padding: 12px;
+  height: 96px;
+  width: calc(100% - 25px);
+}
+
+textarea::placeholder {
+  color: #A5A5A5;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+textarea:focus {
+  outline-color: #61DAFA;
+}
+
+button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+.NoteForm-button--cancel {
+  margin: 10px;
+}
+
+.NoteForm-button--cancel:hover {
+  color: white
+}
+
+.NoteForm-button--add {
+  margin: 10px;
+}
+
+.NoteForm-button--add:hover {
+  color: white;
+}
+
+.NoteForm-buttonContainer {
+  display: grid;
+  place-content: center;
+}
+
+.NoteForm-button--cancel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: red;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms
+}
+
+.NoteForm-button--add::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: rgb(58, 169, 58);
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms
+}
