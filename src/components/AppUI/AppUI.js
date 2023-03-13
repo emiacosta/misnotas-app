@@ -22,15 +22,13 @@ function AppUI() {
 
 
     return (
-        <>  {loading && <Loader />}
+        <>
+            <NotesCounter />
+            <NotesSearch />
+            {loading && <Loader />}
             <NotesList>
                 {error && <p>Hubo un error</p>}
-                {(!loading && !searchedNotes.length) &&
-                    <>
-                        <NotesCounter />
-                        <NotesSearch />
-                        <p className='primeraNota'>Crea tu primera Nota!</p>
-                    </>}
+                {(!loading && !searchedNotes.length) && <p className='primeraNota'>Crea tu primera Nota!</p>}
                 {searchedNotes.map(note => (
                     <NotesItem
                         key={note.text}
