@@ -22,7 +22,7 @@ function AppUI() {
 
 
     return (
-        <>
+        <div className='myApp'>
             <NotesCounter />
             <NotesSearch />
             {loading && <Loader />}
@@ -46,7 +46,7 @@ function AppUI() {
             <CreateNotesButton
                 setOpenModal={setOpenModal}
             />
-        </>
+        </div>
     )
 }
 

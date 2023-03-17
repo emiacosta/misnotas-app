@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Nunito:wght@400;600&family=Open+Sans:ital,wght@0,500;1,600&display=swap');
 
 .NotesSearch {
-  background: #F9FBFC;
+  background: rgba(77, 74, 183, 0.9);
   border-radius: 2px;
   border: 2px solid #202329;
   margin: 0 24px;
@@ -12,15 +12,16 @@
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   color: #1E1E1F;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+  border-radius: 12px;
+  box-shadow: 0px 5px 50px linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
 }
 
 .NotesSearch::placeholder {
-  color: #A5A5A5;
+  color: rgba(255, 255, 255, 0.9);
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
 }
 
 .NotesSearch:focus {
-  outline-color: #61DAFA;
+  outline-color: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
 }

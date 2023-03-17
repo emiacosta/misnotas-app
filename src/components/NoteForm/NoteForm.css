@@ -5,8 +5,9 @@
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 0.4em;
-  background-color: #171717;
+  background-color: rgba(35, 13, 62, 0.90);
   border-radius: 20px;
+  border: solid 2px blueviolet;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -108,7 +109,6 @@
 }
 
 .formCard2:hover {
-  transform: scale(0.98);
   border-radius: 20px;
 }
 
