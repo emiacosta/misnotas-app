@@ -1,4 +1,4 @@
-ul {
+.NotesList {
     margin: 30px;
     padding: 0 0 56px 0;
     list-style: none;
@@ -7,4 +7,5 @@ ul {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 60vh;
   }

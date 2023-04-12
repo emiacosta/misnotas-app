@@ -2,7 +2,7 @@ import './NotesList.css'
 function NotesList(props) {
     return (
         <section>
-            <ul>{props.children}</ul>
+            <ul className='NotesList'>{props.children}</ul>
         </section>
     );
 }
